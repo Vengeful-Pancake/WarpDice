@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/simpleRollFragment">
+
+    <fragment
+        android:id="@+id/simpleRollFragment"
+        android:name="com.example.wardice.ui.simple.SimpleRollFragment"
+        android:label="Simple Roll"
+        tools:layout="@layout/fragment_simple_roll" />
+
+    <fragment
+        android:id="@+id/sequenceRollFragment"
+        android:name="com.example.wardice.ui.sequence.SequenceRollFragment"
+        android:label="Sequence Roll"
+        tools:layout="@layout/fragment_sequence_roll" />
+
+    <fragment
+        android:id="@+id/customRollFragment"
+        android:name="com.example.wardice.ui.custom.CustomRollFragment"
+        android:label="Custom Roll"
+        tools:layout="@layout/fragment_custom_roll" />
+</navigation>

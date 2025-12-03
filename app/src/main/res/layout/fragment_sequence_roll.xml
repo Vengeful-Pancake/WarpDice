@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Attacks -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attacks (dice)" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAttacks"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="24" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAttackDie"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Die">
+            <AutoCompleteTextView
+                android:id="@+id/dropdownAttackDie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Hit / wound / save thresholds -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Hit TN (X+)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputHitTN"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Wound TN (X+)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputWoundTN"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Save TN (X+)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputSaveTN"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Simple toggles subset -->
+        <CheckBox
+            android:id="@+id/checkRerollHitFailures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reroll hit rolls (failures)" />
+
+        <CheckBox
+            android:id="@+id/checkRerollHitOnes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reroll hit rolls of 1s" />
+
+        <CheckBox
+            android:id="@+id/checkRerollWoundFailures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twin-link (reroll failed wound rolls)" />
+
+        <CheckBox
+            android:id="@+id/checkRerollWoundOnes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reroll wound rolls of 1s" />
+
+        <!-- Simulation -->
+        <CheckBox
+            android:id="@+id/checkSimulate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simulating" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Times">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSimTimes"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonExecute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Execute Sequence" />
+
+        <TextView
+            android:id="@+id/textSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:paddingTop="16dp" />
+
+        <!-- Charts -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartHits"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingTop="16dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartWounds"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartUnsaved"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/buttonAddStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Step" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSteps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/buttonRunCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Run Custom Sequence" />
+
+    <TextView
+        android:id="@+id/textCustomResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Results..." />
+</LinearLayout>

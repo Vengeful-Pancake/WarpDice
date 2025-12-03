@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:spacing="8dp">
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple Roll"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/editDiceCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Number of dice (e.g. 24)" />
+
+        <Spinner
+            android:id="@+id/spinnerDieSides"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editSuccessTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Success TN (X+), optional" />
+
+        <Button
+            android:id="@+id/buttonRoll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll" />
+
+        <TextView
+            android:id="@+id/textSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summary will appear here" />
+
+        <TextView
+            android:id="@+id/textResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Results will appear here" />
+    </LinearLayout>
+</ScrollView>

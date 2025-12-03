@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/simpleRollFragment"
+            android:title="Simple Roll" />
+        <item
+            android:id="@+id/sequenceRollFragment"
+            android:title="Sequence Roll" />
+        <item
+            android:id="@+id/customRollFragment"
+            android:title="Custom Roll" />
+    </group>
+</menu>
